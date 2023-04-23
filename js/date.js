@@ -64,3 +64,16 @@ const myDate = myTime.getDate(); //24
 
 const prefixMonth = myMonth < 10 ? "0" : "";
 console.log(`${myDate}/${prefixMonth}${myMonth}/${myYear}`); //24/04/2023
+
+// setTimeout vs setInterval
+
+// const timer1 = setTimeout(function () {
+//     alert("call me after 3 sec");
+// }, 3000);
+// clearTimeout(timer1);
+
+const timer = setInterval(function () {
+    console.log("call me");
+}, 1000);
+
+clearInterval(timer);
