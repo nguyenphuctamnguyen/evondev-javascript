@@ -55,3 +55,12 @@ console.log(now.toTimeString()); //21:20:20 GMT+0700 (Giờ Đông Dương)
 console.log(now.toLocaleDateString()); //m/dd/yyyy -> 6/26/2022
 console.log(now.toLocaleDateString("vi-VI")); // 26/6/2022
 console.log(now.toISOString()); //2023-04-23T21:22:21.536Z
+
+// input: Mon Apr 24 2023 04:22:32 GMT+0700 (Indochina Time)
+const myTime = new Date("Mon Apr 24 2023 04:22:32 GMT+0700 (Indochina Time)");
+const myYear = myTime.getFullYear(); //2023
+const myMonth = myTime.getMonth() + 1; //4
+const myDate = myTime.getDate(); //24
+
+const prefixMonth = myMonth < 10 ? "0" : "";
+console.log(`${myDate}/${prefixMonth}${myMonth}/${myYear}`); //24/04/2023
