@@ -48,6 +48,11 @@ function timeSince(date) {
     const seconds = Math.floor((now.getTime() - yourDate.getTime()) / 1000); // in ra số giây
     // console.log(seconds);
 
+    if (seconds < 0) {
+        alert("Your time is invalid");
+        return;
+    }
+
     // 1 năm = 365 * 24 * 60 * 60 = 31536000
     // 1 tháng = 31 * 24 * 60 * 60 = 2678400
     // 1 tuần = 7 * 24 * 60 * 60 = 604800
@@ -85,6 +90,7 @@ function timeSince(date) {
         console.log(`${Math.floor(timer)} phút trước`);
         return;
     }
+    timer = seconds;
     if (timer > 1) {
         console.log(`${Math.floor(timer)} giây trước`);
     }
