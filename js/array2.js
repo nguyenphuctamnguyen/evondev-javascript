@@ -77,3 +77,11 @@ console.log(random4); // [9999, 10, 9, 5, 1]
 
 const random5 = random.sort((a, b) => (a > b ? 0 : 1));
 console.log(random5); // [1, 9999, 10, 5, 9]
+
+// find: trả về phần tử tìm thấy đầu tiên trong mảng thỏa điều kiện nào đó
+const numbers = [1, 9999, 100000, 5, 09];
+
+// tìm phần tử đầu tiên lớn hơn 10
+const findYourNumber = numbers.find((element) => element > 10);
+console.log(findYourNumber); // 9999
+// nếu không tìm thấy thì trả ra kết quả là undefined
