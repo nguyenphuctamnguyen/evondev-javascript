@@ -116,3 +116,12 @@ console.log(listNumberTriple); // undefined
 const greaterThanThree = listNumber.filter((item) => item > 3);
 console.log(listNumber); // [1, 2, 3, 4, 5]
 console.log(greaterThanThree); // [4, 5]
+
+// So sánh some và every: (đều trả về boolean)
+// some: trả về true khi thỏa 1 điều kiện, trả về false khi không thỏa điều kiện nào cả
+const someNumber = listNumber.some((value) => value > 3);
+console.log(someNumber); // true
+
+// every: chỉ trả về true khi tất cả đều đúng điều kiện, trả về false khi chỉ cần 1 cái sai điều kiện
+const everyNumber = listNumber.every((value) => value > 3);
+console.log(everyNumber); // false
