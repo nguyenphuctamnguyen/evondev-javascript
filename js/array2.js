@@ -26,3 +26,28 @@ const twice6 = twice.slice(-1);
 const twice7 = twice.slice(-3);
 console.log(twice6); //['Tzuyu']
 console.log(twice7); //['Dahyun', 'Chaeyoung', 'Tzuyu']
+
+// splice: xóa hoặc thay thế phần tử trong mảng
+const members = [
+    "Nayeon",
+    "Jeongyeon",
+    "Momo",
+    "Sana",
+    "Jihyo",
+    "Mina",
+    "Dahyun",
+    "Chaeyoung",
+    "Tzuyu",
+];
+
+// splice(start)
+// const members2 = members.splice(0);
+// console.log(members2); //['Nayeon', 'Jeongyeon', 'Momo', 'Sana', 'Jihyo', 'Mina', 'Dahyun', 'Chaeyoung', 'Tzuyu']
+
+// splice(start, deleteCount)
+// const members3 = members.splice(0, 1);
+// console.log(members); //['Jeongyeon', 'Momo', 'Sana', 'Jihyo', 'Mina', 'Dahyun', 'Chaeyoung', 'Tzuyu']
+
+// splice(start, deleteCount, items[])
+const members4 = members.splice(0, 1, "twice");
+console.log(members); //['twice', 'Jeongyeon', 'Momo', 'Sana', 'Jihyo', 'Mina', 'Dahyun', 'Chaeyoung', 'Tzuyu']
