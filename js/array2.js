@@ -85,3 +85,8 @@ const numbers = [1, 9999, 100000, 5, 09];
 const findYourNumber = numbers.find((element) => element > 10);
 console.log(findYourNumber); // 9999
 // nếu không tìm thấy thì trả ra kết quả là undefined
+
+// findIndex: trả về vị trí index tìm thấy đầu tiên trong mảng thỏa điều kiện nào đó
+const findYourNumberIndex = numbers.findIndex((element) => element > 10);
+console.log(findYourNumberIndex); // 1
+// nếu không tìm thấy thì trả ra kết quả là -1
