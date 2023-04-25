@@ -51,3 +51,29 @@ const members = [
 // splice(start, deleteCount, items[])
 const members4 = members.splice(0, 1, "twice");
 console.log(members); //['twice', 'Jeongyeon', 'Momo', 'Sana', 'Jihyo', 'Mina', 'Dahyun', 'Chaeyoung', 'Tzuyu']
+
+// sort: sắp xếp các phần tử trong mảng
+const random = [1, 9999, 10, 5, 09];
+console.log(random.sort()); // [1, 10, 5, 9, 9999]
+
+// sort(function(a, b))
+//function(callback)
+
+// value > 0 -> sắp xếp tăng dần
+// value < 0 -> sắp xếp giảm dần
+// value = 0 -> giữ nguyên
+
+const random2 = random.sort(function (a, b) {
+    if (a > b) return 1;
+    if (a < b) return -1;
+});
+console.log(random2); // [1, 5, 9, 10, 9999]
+
+const random3 = random.sort((a, b) => (a > b ? 1 : -1));
+console.log(random3); // [1, 5, 9, 10, 9999]
+
+const random4 = random.sort((a, b) => (a > b ? -1 : 1));
+console.log(random4); // [9999, 10, 9, 5, 1]
+
+const random5 = random.sort((a, b) => (a > b ? 0 : 1));
+console.log(random5); // [1, 9999, 10, 5, 9]
