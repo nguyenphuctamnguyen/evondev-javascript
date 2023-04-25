@@ -98,3 +98,13 @@ const listNumberDouble = listNumber.map(function (value, index, array) {
     return value * 2;
 });
 console.log(listNumberDouble); // [2, 4, 6, 8, 10]
+
+// forEach:
+const listNumberTriple = listNumber.forEach((value, index, array) => {
+    return value * 3;
+});
+console.log(listNumberTriple); // undefined
+
+// Sự khác nhau giữa map và forEach:
+// map: có return, trả ra 1 mảng mới
+// forEach: không có return, không trả ra 1 mảng mới, không dừng
