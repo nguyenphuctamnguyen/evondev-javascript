@@ -94,12 +94,14 @@ console.log(findYourNumberIndex); // 1
 // map: duyệt qua từng phần tử và trả ra 1 mảng mới mà không thay đổi mảng ban đầu
 const listNumber = [1, 2, 3, 4, 5];
 // trả ra mảng mới mà các giá trị trong mảng cũ nhân 2
+// .map(callback(value, index, array))
 const listNumberDouble = listNumber.map(function (value, index, array) {
     return value * 2;
 });
 console.log(listNumberDouble); // [2, 4, 6, 8, 10]
 
 // forEach:
+// .forEach(callback(value, index, array))
 const listNumberTriple = listNumber.forEach((value, index, array) => {
     return value * 3;
 });
@@ -108,3 +110,9 @@ console.log(listNumberTriple); // undefined
 // Sự khác nhau giữa map và forEach:
 // map: có return, trả ra 1 mảng mới
 // forEach: không có return, không trả ra 1 mảng mới, không dừng
+
+// filter: lọc các phần tử thỏa điều kiện nào đó
+// .filter(callback(value, index, array))
+const greaterThanThree = listNumber.filter((item) => item > 3);
+console.log(listNumber); // [1, 2, 3, 4, 5]
+console.log(greaterThanThree); // [4, 5]
