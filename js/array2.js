@@ -125,3 +125,11 @@ console.log(someNumber); // true
 // every: chỉ trả về true khi tất cả đều đúng điều kiện, trả về false khi chỉ cần 1 cái sai điều kiện
 const everyNumber = listNumber.every((value) => value > 3);
 console.log(everyNumber); // false
+
+// reduce: gom các phần tử trong mảng lại thành 1
+// .reduce((previousValue, currentValue) => {}, initialize value)
+const totalNumber = listNumber.reduce(function (previousValue, currentValue) {
+    console.log(previousValue, currentValue);
+    return previousValue + currentValue;
+}, 0);
+console.log(totalNumber); // 15
