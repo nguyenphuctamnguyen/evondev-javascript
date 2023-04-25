@@ -90,3 +90,11 @@ console.log(findYourNumber); // 9999
 const findYourNumberIndex = numbers.findIndex((element) => element > 10);
 console.log(findYourNumberIndex); // 1
 // nếu không tìm thấy thì trả ra kết quả là -1
+
+// map: duyệt qua từng phần tử và trả ra 1 mảng mới mà không thay đổi mảng ban đầu
+const listNumber = [1, 2, 3, 4, 5];
+// trả ra mảng mới mà các giá trị trong mảng cũ nhân 2
+const listNumberDouble = listNumber.map(function (value, index, array) {
+    return value * 2;
+});
+console.log(listNumberDouble); // [2, 4, 6, 8, 10]
