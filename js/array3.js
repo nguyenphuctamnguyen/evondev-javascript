@@ -43,3 +43,18 @@ console.log(sliceStudents); // ['a', 'b', 'c', 'd', 'e']
 // 2) spread operator [...array]
 const spreadStudents = [...students];
 console.log(spreadStudents); // ['a', 'b', 'c', 'd', 'e']
+
+// 2 cách gộp mảng:
+// [1,2] [3,4] [5,6] -> [1,2,3,4,5,6]
+const array1 = [1, 2];
+const array2 = [3, 4];
+const array3 = [5, 6];
+
+// 1) concat
+// array1.concat(array2, array3, arrayN)
+const mergeArray = array1.concat(array2, array3);
+console.log(mergeArray); // [1, 2, 3, 4, 5, 6]
+
+// 2) spread operator [...array]
+const mergeArray2 = [...array1, ...array2, ...array3];
+console.log(mergeArray2); // [1, 2, 3, 4, 5, 6]
