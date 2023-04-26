@@ -30,3 +30,16 @@ console.log(JSON.parse("[1,2,3]"));
 const arr1Str = JSON.stringify(arr1);
 const arr2Str = JSON.stringify(arr2);
 console.log(arr1Str === arr2Str); // true
+
+// 2 cách clone:
+const students = ["a", "b", "c", "d", "e"];
+// students.pop();
+// console.log(students); // ['a', 'b', 'c', 'd']
+
+// 1) sử dụng phương thức slice()
+const sliceStudents = students.slice();
+console.log(sliceStudents); // ['a', 'b', 'c', 'd', 'e']
+
+// 2) spread operator [...array]
+const spreadStudents = [...students];
+console.log(spreadStudents); // ['a', 'b', 'c', 'd', 'e']
