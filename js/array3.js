@@ -58,3 +58,24 @@ console.log(mergeArray); // [1, 2, 3, 4, 5, 6]
 // 2) spread operator [...array]
 const mergeArray2 = [...array1, ...array2, ...array3];
 console.log(mergeArray2); // [1, 2, 3, 4, 5, 6]
+
+// Destructuring array
+const twice = [
+    "Nayeon",
+    "Jeongyeon",
+    "Momo",
+    "Sana",
+    "Jihyo",
+    "Mina",
+    "Dahyun",
+    "Chaeyoung",
+    "Tzuyu",
+];
+const a = twice[0]; // Nayeon
+const b = twice[1]; // Jeongyeon
+const c = twice[2]; // Momo
+console.log(a, b, c); // Nayeon Jeongyeon Momo
+
+// const [indexName, indexName, indexName] = twice;
+const [x, y, z] = twice;
+console.log(x, y, z); // Nayeon Jeongyeon Momo
