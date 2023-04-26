@@ -77,5 +77,12 @@ const c = twice[2]; // Momo
 console.log(a, b, c); // Nayeon Jeongyeon Momo
 
 // const [indexName, indexName, indexName] = twice;
-const [x, y, z] = twice;
+const [x, y, z, ...rest] = twice;
 console.log(x, y, z); // Nayeon Jeongyeon Momo
+// rest parameter ...
+console.log(rest); // ['Sana', 'Jihyo', 'Mina', 'Dahyun', 'Chaeyoung', 'Tzuyu']
+
+function demo(a, ...rest) {
+    console.log(a, rest);
+}
+demo(1, 2, 3, 4, 5); // 1 [2, 3, 4, 5]
