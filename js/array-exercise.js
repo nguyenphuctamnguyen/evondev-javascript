@@ -28,3 +28,35 @@ function reverseString2(str) {
         .join(" "));
 }
 console.log(reverseString2("My name is Su")); // uS si eman yM
+
+// 3. In hoa chữ cái đầu trong chuỗi. Vd: "My name is Su" -> "My Name Is Su"
+// function capitalizeStr(str) {
+//     if (!str) return null;
+
+//     return str
+//         .split(" ")
+//         .map((item) =>
+//             item.replace(item.charAt(0), item.charAt(0).toUpperCase())
+//         )
+//         .join(" ");
+// }
+// console.log(capitalizeStr("My name is Su")); // uS si eman yM
+
+function capitalizeWord(a = "") {
+    if (a.length === 0) return null;
+    a = a.toLowerCase();
+    a = a.replace(a.charAt(0), a.charAt(0).toUpperCase());
+    return a;
+}
+function capitalizeStr(str) {
+    if (!str) return null;
+
+    return (
+        str
+            .split(" ")
+            // .map((item) => capitalizeWord(item))
+            .map(capitalizeWord)
+            .join(" ")
+    );
+}
+console.log(capitalizeStr("My name is Su")); // uS si eman yM
