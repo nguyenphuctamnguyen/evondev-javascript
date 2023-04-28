@@ -34,3 +34,18 @@ function reverseNumber(number) {
     console.log(value);
 }
 reverseNumber(-1234); // -4321
+reverseNumber(1234); // 4321
+
+// 4. Viết chương trình fizzBuzz với input là số nguyên, và cho chạy từ 1 tới số nguyên đó rồi kiểm tra nếu số chia hết cho 2 thì in ra "Fizz", nếu số chia hết cho 3 thì in ra "Buzz", nếu số chia hết cho 2 và 3 thì in ra "FizzBuzz"
+function fizzBuzz(number) {
+    for (let i = 1; i <= number; i++) {
+        if (i % 3 === 0 && i % 2 === 0) {
+            console.log("FizzBuzz");
+        } else if (i % 3 === 0) {
+            console.log("Buzz");
+        } else if (i % 2 === 0) {
+            console.log("Fizz");
+        }
+    }
+}
+fizzBuzz(15);
