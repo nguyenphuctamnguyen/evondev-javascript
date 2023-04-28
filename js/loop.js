@@ -26,10 +26,25 @@ while (number < 10) {
 
 // do while
 // do {
-//
+//     body code
 // } while (condition);
 let number2 = 1;
 do {
     number2++;
     console.log("number is " + number2);
 } while (number2 < 10);
+
+// for of
+// for (const value of object) {
+//     body code
+// }
+let a = [];
+for (let value of numbers) {
+    value += 10;
+    a.push(value);
+}
+console.log(a); // [11, 12, 13, 14, 15]
+
+for (let c of "sucute") {
+    console.log(c);
+}
