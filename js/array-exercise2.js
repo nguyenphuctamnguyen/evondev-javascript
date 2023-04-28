@@ -49,3 +49,14 @@ function fizzBuzz(number) {
     }
 }
 fizzBuzz(15);
+
+// 5. Cho 1 chuỗi bất kì, đếm số lượng kí tự nguyên âm có trong chuỗi
+function countVowels(str) {
+    let count = 0;
+    const characters = "ueoai";
+    for (let c of str.toLowerCase()) {
+        if (characters.includes(c)) count++;
+    }
+    return count;
+}
+console.log(countVowels("Evondev")); // 3 (e, o, e)
