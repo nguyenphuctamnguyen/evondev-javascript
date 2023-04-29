@@ -74,3 +74,16 @@ function unique(arr) {
 }
 console.log(unique([1, 2, 3, 1, 1, 1, 2, 5, 5, 5, 7, 7, 6])); // [1, 2, 3, 5, 7, 6]
 console.log(unique("abc")); // []
+
+// 7. Viết function xử lí từ 1 mảng lớn thành nhiều mảng con dựa vào 1 số nguyên đầu vào. Vd: ([1,2,3,4,5],2)-> [[1,2],[3,4],[5]]
+function splitArray(arr, number) {
+    let result = [];
+    let index = 0;
+    while (index < arr.length) {
+        result.push(arr.slice(index, number + index));
+        index = index + number;
+    }
+    return result;
+}
+console.log(splitArray([1, 2, 3, 4, 5], 2)); // [[1,2],[3,4],[5]]
+console.log(splitArray([1, 2, 3, 4, 5, 6], 3)); // [[1,2,3],[4, 5, 6]]
