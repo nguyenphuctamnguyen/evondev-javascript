@@ -60,3 +60,17 @@ function countVowels(str) {
     return count;
 }
 console.log(countVowels("Evondev")); // 3 (e, o, e)
+
+// 6. Cho 1 mảng các giá trị số [1,2,3,1,1,1,2,5,5,5,7,7,6]. Viết function trả về 1 mảng với các giá trị unique. Kết quả ở trên sẽ là [1,2,3,5,7,6]
+function unique(arr) {
+    let result = [];
+    if (!Array.isArray(arr)) return result;
+    for (let i = 0; i < arr.length; i++) {
+        if (!result.includes(arr[i])) {
+            result.push(arr[i]);
+        }
+    }
+    return result;
+}
+console.log(unique([1, 2, 3, 1, 1, 1, 2, 5, 5, 5, 7, 7, 6])); // [1, 2, 3, 5, 7, 6]
+console.log(unique("abc")); // []
