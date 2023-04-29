@@ -25,3 +25,8 @@ student.isDeveloper = true;
 
 delete student.hi;
 console.log(student); // {name: 'Su', age: 22, male: false, last-name: 'Nguyen', isDeveloper: true}
+
+for (let key in student) {
+    const value = student[key];
+    console.log(`${key}: ${value}`);
+}
