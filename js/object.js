@@ -31,10 +31,14 @@ for (let key in student) {
     console.log(`${key}: ${value}`);
 }
 
-// Object.keys(): trả về 1 mảng chứa tất cả key của object
+// Object.keys(object): trả về 1 mảng chứa tất cả key của object
 const keys = Object.keys(student);
 console.log(keys); // ['name', 'age', 'male', 'last-name', 'isDeveloper']
 
 // Object.values(object): trả về 1 mảng chứa tất cả value của object
 const values = Object.values(student);
 console.log(values); // ['Su', 22, false, 'Nguyen', true]
+
+// Object.entries(object): trả về 1 mảng nested gồm key và value
+const entries = Object.entries(student);
+console.log(entries); // [['name', 'Su'], ['age', 22], ['male', false],['last-name', 'Nguyen'], ['isDeveloper', true]]
