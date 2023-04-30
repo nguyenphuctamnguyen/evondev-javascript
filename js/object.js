@@ -30,3 +30,7 @@ for (let key in student) {
     const value = student[key];
     console.log(`${key}: ${value}`);
 }
+
+// Object.keys(): trả về 1 mảng chứa tất cả key của object
+const keys = Object.keys(student);
+console.log(keys); // ['name', 'age', 'male', 'last-name', 'isDeveloper']
