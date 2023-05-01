@@ -62,3 +62,12 @@ const car = {
 const newCar = Object.freeze(car);
 newCar.brand = "Audi";
 console.log(newCar); // {brand: 'BMW'}
+
+// Object.seal(object): cho phép chỉnh sửa key value nhưng không được thêm key value mới
+const user = {
+    userName: "su",
+};
+const newUser = Object.seal(user);
+newUser.userName = "sumyoui";
+newUser.lastName = "sucute";
+console.log(newUser); // {userName: 'sumyoui'}
