@@ -66,8 +66,26 @@ console.log(newCar); // {brand: 'BMW'}
 // Object.seal(object): cho phép chỉnh sửa key value nhưng không được thêm key value mới
 const user = {
     userName: "su",
+    school: {
+        name: "tdt",
+        room: {
+            name: "it",
+        },
+    },
 };
-const newUser = Object.seal(user);
-newUser.userName = "sumyoui";
-newUser.lastName = "sucute";
-console.log(newUser); // {userName: 'sumyoui'}
+// const newUser = Object.seal(user);
+// newUser.userName = "sumyoui";
+// newUser.lastName = "sucute";
+// console.log(newUser); // {userName: 'sumyoui'}
+
+// Clone object thường
+const newUser = { ...user };
+console.log(newUser);
+
+const newUser2 = Object.assign({}, user);
+console.log(newUser2);
+
+// Clone object nested
+const newUser3 = JSON.parse(JSON.stringify(user));
+newUser3.school.name = "tdt2";
+console.log(newUser3);
