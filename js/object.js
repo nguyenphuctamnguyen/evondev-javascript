@@ -99,5 +99,18 @@ const student2 = {
     hi: function () {
         console.log(`My name is ${this.name} and i'm ${this.age}`); // My name is Su and i'm 23
     },
+    fullname: {
+        name: "Su Nguyen",
+    },
 };
 student2.hi();
+
+// optional chaining
+// console.log(student2.fullname); // undefined
+if (student2.fullname) {
+    if (student2.fullname.name) {
+        console.log(student2.fullname.name); // Su Nguyen
+    }
+}
+// student2.fullname?.name
+console.log(student2.fullname?.name); // Su Nguyen
