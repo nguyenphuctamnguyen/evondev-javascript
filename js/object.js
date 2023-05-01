@@ -89,3 +89,15 @@ console.log(newUser2);
 const newUser3 = JSON.parse(JSON.stringify(user));
 newUser3.school.name = "tdt2";
 console.log(newUser3);
+
+// this keyword: đề cập tới object gần nhất
+const student2 = {
+    name: "Su",
+    age: 23,
+    male: false,
+    "last-name": "Nguyen",
+    hi: function () {
+        console.log(`My name is ${this.name} and i'm ${this.age}`); // My name is Su and i'm 23
+    },
+};
+student2.hi();
