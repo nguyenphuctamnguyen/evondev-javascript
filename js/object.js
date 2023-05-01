@@ -54,3 +54,11 @@ const c = Object.assign(a, b);
 console.log(c); // {firstName: 'nguyen', lastName: 'nguyen'}
 const d = { ...a, ...b };
 console.log(d); // {firstName: 'nguyen', lastName: 'nguyen'}
+
+// Object.freeze(object): ngăn chặn chỉnh sửa key và value của object
+const car = {
+    brand: "BMW",
+};
+const newCar = Object.freeze(car);
+newCar.brand = "Audi";
+console.log(newCar); // {brand: 'BMW'}
