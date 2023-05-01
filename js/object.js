@@ -42,3 +42,15 @@ console.log(values); // ['Su', 22, false, 'Nguyen', true]
 // Object.entries(object): trả về 1 mảng nested gồm key và value
 const entries = Object.entries(student);
 console.log(entries); // [['name', 'Su'], ['age', 22], ['male', false],['last-name', 'Nguyen'], ['isDeveloper', true]]
+
+// Object.assign(object, object,...): gộp nhiều object thành 1 object
+const a = {
+    firstName: "nguyen",
+};
+const b = {
+    lastName: "nguyen",
+};
+const c = Object.assign(a, b);
+console.log(c); // {firstName: 'nguyen', lastName: 'nguyen'}
+const d = { ...a, ...b };
+console.log(d); // {firstName: 'nguyen', lastName: 'nguyen'}
