@@ -13,3 +13,9 @@ li.forEach((item) => {
 // item item3
 // item item4
 // item item5
+
+// selector.setAttribute("attribute", value): set giá trị cho attribute nào đó của selector
+link.setAttribute("target", "_blank");
+
+const listLinks = document.querySelectorAll("a.link");
+listLinks.forEach((item) => item.setAttribute("target", "_blank"));
