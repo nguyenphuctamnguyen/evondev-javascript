@@ -29,3 +29,7 @@ console.log(classNode); // HTMLCollection(5) [li.item, li.item, li.item, li.ite
 // document.getElementsByTagName: trả về 1 HTMLCollection, nếu không có trả về empty []
 const tagNodes = document.getElementsByTagName("h1");
 console.log(tagNodes); // HTMLCollection [h1]
+
+// document.getElementById("idName"): trả về 1 node nếu tồn tại id đó, ngược lại trả về null
+const idNode = document.getElementById("spinner");
+console.log(idNode); // <div id="spinner"></div>
