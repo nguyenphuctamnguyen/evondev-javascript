@@ -20,8 +20,12 @@ const multiNodes = document.querySelectorAll(".item");
 // for (let i = 0; i < multiNodes.length; i++) {
 //     console.log(multiNodes[i]);
 // }
-// console.log(multiNodes); // NodeList(5) [li.item, li.item, li.item, li.item, li.item]
+console.log(multiNodes); // NodeList(5) [li.item, li.item, li.item, li.item, li.item]
 
 // document.getElementsByClassName('classNames'): trả về 1 HTMLCollection, nếu không có trả về empty []
 const classNode = document.getElementsByClassName("item");
 console.log(classNode); // HTMLCollection(5) [li.item, li.item, li.item, li.item, li.item]
+
+// document.getElementsByTagName: trả về 1 HTMLCollection, nếu không có trả về empty []
+const tagNodes = document.getElementsByTagName("h1");
+console.log(tagNodes); // HTMLCollection [h1]
