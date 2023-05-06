@@ -114,3 +114,39 @@ if (student2.fullname) {
 }
 // student2.fullname?.name
 console.log(student2.fullname?.name); // Su Nguyen
+
+// destructuring object
+// const {} = student2;
+const { name, age, male, ...rest } = student2;
+// const name = student2.name;
+// const age = student2.age;
+// const male = student2.male;
+console.log({ name, age, male }); // name: 'Su', age: 23, male: false}
+console.log(name, age, male); // Su 23 false
+console.log(rest); // {last-name: 'Nguyen', fullname: {…}, hi: ƒ}
+
+// normal function
+function whatYourInfo(name, age, school) {
+    console.log(name, age, school);
+}
+whatYourInfo("Mina", 26, "twice"); // Mina 26 twice
+
+// function with object parameter
+function whatYourInfo2(obj) {
+    console.log(obj.name, obj.age, obj.school);
+}
+const newObj = {
+    name: "Nayeon",
+    age: 28,
+    school: "twice",
+};
+whatYourInfo2(newObj); // Nayeon 28 twice
+
+function whatYourInfo3({ name, age, school }) {
+    console.log(name, age, school);
+}
+whatYourInfo3({
+    name: "Nayeon",
+    age: 28,
+    school: "twice",
+}); // Nayeon 28 twice
