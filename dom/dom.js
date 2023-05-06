@@ -13,8 +13,15 @@ console.log(singleNode2); // <div class="container">Lorem ipsum dolor sit amet c
 console.log(singleNode3); // <div id="spinner"></div>
 console.log(singleNode4); // null
 
-// document.querySelectorAll('selector'): trả về 1 NodeList chứa danh sách các node, ngược lại trả về empty
-// có thể loop: forEach, map, filter
+// document.querySelectorAll('selectors'): trả về 1 NodeList chứa danh sách các node, ngược lại trả về empty
+// có thể loop: forEach, for, for of
 // giống array có thể loop nhưng ko sử dụng đc các phương thức như push, pop, shift, ..
 const multiNodes = document.querySelectorAll(".item");
-console.log(multiNodes); // NodeList(5) [li.item, li.item, li.item, li.item, li.item]
+// for (let i = 0; i < multiNodes.length; i++) {
+//     console.log(multiNodes[i]);
+// }
+// console.log(multiNodes); // NodeList(5) [li.item, li.item, li.item, li.item, li.item]
+
+// document.getElementsByClassName('classNames'): trả về 1 HTMLCollection, nếu không có trả về empty []
+const classNode = document.getElementsByClassName("item");
+console.log(classNode); // HTMLCollection(5) [li.item, li.item, li.item, li.item, li.item]
