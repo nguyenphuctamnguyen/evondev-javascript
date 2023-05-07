@@ -20,6 +20,10 @@ link.setAttribute("target", "_blank");
 const listLinks = document.querySelectorAll("a.link");
 listLinks.forEach((item) => item.setAttribute("target", "_blank"));
 
-// selector.removeAttribute("attribute"):
+// selector.removeAttribute("attribute"): xóa attribute của selector
 const p = document.getElementById("spinner");
 p.removeAttribute("style");
+
+// selector.hasAttribute("attribute"): kiểm tra selector có attribute nào đó không, nếu có -> true, ngược lại -> false
+console.log(p.hasAttribute("class")); // false
+console.log(p.hasAttribute("id")); // true
