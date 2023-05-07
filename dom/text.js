@@ -10,3 +10,10 @@ console.log(spinner.textContent); // Lorem ipsum dolor sit amet consectetur adip
 
 // innerText
 console.log(spinner.innerText); // Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur asperiores fugiat soluta est animi ad nam enim et culpa veritatis?
+
+// innerHTML: lấy ra nội dung của selector bao gồm cả HTML
+console.log(spinner.innerHTML); // Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+// asperiores fugiat <strong class="demo" style="display: none;">hello world</strong>
+// soluta est animi ad nam enim et culpa veritatis?
+spinner.innerHTML = `<div class="demo"> Hello html</div>`;
+console.log(spinner.innerHTML); // <div class="demo"> Hello html</div>
