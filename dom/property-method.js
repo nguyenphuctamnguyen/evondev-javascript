@@ -19,3 +19,7 @@ link.setAttribute("target", "_blank");
 
 const listLinks = document.querySelectorAll("a.link");
 listLinks.forEach((item) => item.setAttribute("target", "_blank"));
+
+// selector.removeAttribute("attribute"):
+const p = document.getElementById("spinner");
+p.removeAttribute("style");
