@@ -36,3 +36,6 @@ h1.appendChild(text);
 // 4. selector.cloneNode()
 const h1Clone = h1.cloneNode(true);
 body.appendChild(h1Clone);
+
+// 5. element.hasChildNodes: kiểm tra có phần tử con hay không, có -> true, không có -> false
+console.log(h1.hasChildNodes()); // true
