@@ -20,9 +20,15 @@ const card = document.createElement("div");
 card.classList.add("card");
 
 const cardImage = document.createElement("img");
-cardImage.setAttribute("src", "https://source.unsplash.com/random");
+// cardImage.setAttribute("src", "https://source.unsplash.com/random");
 cardImage.classList.add("card-image");
 
 card.appendChild(cardImage);
 
 body.appendChild(card);
+
+// 3. document.createTextNode
+const text = document.createTextNode("Hello Ying");
+const h1 = document.createElement("h1");
+body.appendChild(h1);
+h1.appendChild(text);
