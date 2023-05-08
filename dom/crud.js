@@ -32,3 +32,7 @@ const text = document.createTextNode("Hello Ying");
 const h1 = document.createElement("h1");
 body.appendChild(h1);
 h1.appendChild(text);
+
+// 4. selector.cloneNode()
+const h1Clone = h1.cloneNode(true);
+body.appendChild(h1Clone);
