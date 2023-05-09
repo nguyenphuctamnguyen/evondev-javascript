@@ -14,3 +14,10 @@ document.head.appendChild(meta);
 const head = document.getElementsByTagName("head");
 head[0].appendChild(meta);
 console.log(head);
+
+// insertBefore
+// parentNode.insertBefore(newnode, existingnode)
+const ul = document.querySelector("ul");
+document.body.insertBefore(ul, document.querySelector("h3").nextElementSibling);
+// insertAdjacentElement
+// document.querySelector("h3").insertAdjacentElement("beforebegin", ul);
