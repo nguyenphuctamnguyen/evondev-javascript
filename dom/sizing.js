@@ -11,3 +11,9 @@ console.log(boxed.clientWidth); // độ rộng của phần tử trừ border: 
 console.log(boxed.clientHeight); // chiều cao của phần tử trừ border: 190
 console.log(boxed.clientLeft); // vị trí của nó so với border bên trái: 5
 console.log(boxed.clientTop); // vị trí của nó so với border bên trên: 5
+
+// 3. window.innerWidth, window.outerWidth, window.innerHeight, window.outerHeight
+console.log(window.innerWidth); // 714
+console.log(window.outerWidth); // 784
+console.log(window.innerHeight); // 720
+console.log(window.outerHeight); // 840
