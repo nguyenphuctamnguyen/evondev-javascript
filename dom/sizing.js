@@ -24,3 +24,12 @@ console.log(boxed.getBoundingClientRect()); // {x: 0, y: 0, width: 200, height: 
 // top, y: vị trí của khối so với bên trên
 // bottom: chiều cao của khối + top
 // right: độ rộng của khổi + left
+
+// Sự khác nhau giữa NodeList và HTMLCollection
+const li = document.getElementsByTagName("li");
+const li2 = document.querySelectorAll("li");
+console.log(li);
+console.log(li2);
+// Giống: có thể truy cập bằng index, có length, giống mảng nhưng ko hẳn là mảng, ko sử dụng đc pop, shift, push, map, filter
+// HTMLCollection: không sử dụng đc forEach
+// NodeList: sử dụng đc forEach
