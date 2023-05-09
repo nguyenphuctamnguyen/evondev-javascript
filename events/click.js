@@ -44,3 +44,10 @@ button.addEventListener("click", function (e) {
     // event.currentTarget: chọn phần tử mà mình click
     console.log(`e.currentTarget: ${e.currentTarget}`);
 });
+
+// event.preventDefault()
+const link = document.querySelector(".link");
+link.addEventListener("click", function (event) {
+    event.preventDefault();
+    console.log("clickme");
+});
