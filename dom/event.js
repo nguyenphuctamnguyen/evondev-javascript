@@ -1,0 +1,3 @@
+// 1. Add event
+// selector.addEventListener("eventName", handler, [options])
+// click, keydown, keypress, keyup, mouseover, mousemove, mouseleave, load, DOMContentLoaded,...
