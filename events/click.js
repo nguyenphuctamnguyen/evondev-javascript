@@ -9,11 +9,24 @@ function handleClick() {
 // button.addEventListener("click", handleClick());
 // Đúng
 // button.addEventListener("click", function () {});
-button.addEventListener("click", handleClick);
+button.addEventListener("click", handleClick, {
+    capture: true,
+});
 // event: e
+// span.addEventListener(
+//     "click",
+//     function (e) {
+//         // e.stopPropagation();
+//         e.stopImmediatePropagation();
+//         console.log("click span");
+//     },
+//     {
+//         capture: true,
+//     }
+// );
 span.addEventListener("click", function (e) {
     e.stopPropagation();
-    console.log("click span");
+    console.log("click span 2");
 });
 document.body.addEventListener("click", function () {
     console.log("click body");
@@ -21,3 +34,6 @@ document.body.addEventListener("click", function () {
 
 // bubbling: nổi bọt
 // sự kiện click chạy từ trong ra ngoài
+
+// capturing: nổi bọt
+// sự kiện click chạy từ ngoài vào trong
