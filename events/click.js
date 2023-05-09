@@ -49,9 +49,14 @@ button.addEventListener("click", function (e) {
 const link = document.querySelector(".link");
 link.addEventListener("click", function (event) {
     event.preventDefault();
+    // lấy custom attribute data-abc
+    // event.target.dataset.abc
+    const name = event.target.dataset.name;
+    console.log(name); // yingying
 
     //selector.style.property = value
     //event.target.style.property = value
-    console.log(event.target);
-    console.log(event.target.style);
+    // console.log(event.target);
+    // console.log(event.target.style);
+    // event.target.style.color = "yellow";
 });
