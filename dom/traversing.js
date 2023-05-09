@@ -8,6 +8,12 @@ console.log(span.parentElement);
 // span.parentNode.removeChild(span);
 // span.remove()
 
+// Sự khác nhau giữa parentNode và parentElement
+// parentElement có thể null
+// document.documentElement: lấy thẻ html
+console.log(document.documentElement.parentElement); // null
+console.log(document.documentElement.parentNode); // #document
+
 // 2. nextElementSibling vs previousElementSibling
 const nextSpan = span.nextElementSibling;
 console.log(nextSpan);
