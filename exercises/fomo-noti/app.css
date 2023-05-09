@@ -46,30 +46,49 @@ img {
     display: block;
     max-width: 100%;
 }
-input,
-button,
 body {
     font-family: "Poppins", sans-serif;
     font-size: 16px;
     line-height: 1;
 }
-.menu {
-    width: 300px;
+.noti {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
+    left: 15px;
+    bottom: 15px;
+    background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    list-style: none;
-    transform: translateX(100%);
-    transition: transform 0.25s linear;
+    border-radius: 8px;
+    display: flex;
+    max-width: 400px;
+    height: 130px;
+    transform: translateY(150%);
+    animation: noti 4s forwards 1 linear;
 }
-.menu.is-show {
-    transform: translateX(0);
+@keyframes noti {
+    20%,
+    80% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(150%);
+    }
 }
-.menu-link {
-    display: block;
-    padding: 20px 15px;
-    color: #333;
-    border-bottom: 1px solid #eee;
+.noti-image {
+    width: 30%;
+    flex-shrink: 0;
+    border-radius: inherit;
+    object-fit: cover;
+}
+.noti-content {
+    padding: 15px;
+    flex: 1;
+}
+.noti-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.noti-desc {
+    font-size: 14px;
+    line-height: 1.6;
 }
