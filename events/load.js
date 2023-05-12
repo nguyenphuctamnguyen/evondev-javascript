@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // window.addEventListener("load")
 // web fully loaded
-
 window.addEventListener("load", function () {
     console.log("Your web loaded");
 });
