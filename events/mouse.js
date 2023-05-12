@@ -19,3 +19,12 @@ button.addEventListener("mouseenter", function () {
 button.addEventListener("mouseleave", function () {
     console.log("mouseleave");
 });
+
+// pageX, pageY, clientX, clientY
+document.addEventListener("mousemove", function (e) {
+    console.log(`pageX: ${e.pageY}`);
+    console.log(`clientX: ${e.clientY}`);
+});
+
+// clientY: lấy tọa độ theo viewport
+// pageY: lấy tọa độ theo document, khi có scroll thì nó sẽ thay đổi
