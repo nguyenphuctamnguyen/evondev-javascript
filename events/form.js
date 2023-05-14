@@ -17,3 +17,14 @@ input.addEventListener("keydown", function (e) {
 input.addEventListener("keyup", function (e) {
     console.log(e.key);
 });
+
+// 3. keypress: sự kiện xảy ra khi nhấn phím
+// keypress sẽ ignore các phím như delete, mũi tên, page up, page down, home, end, ctrl, alt, shift, esc
+input.addEventListener("keypress", function (e) {
+    console.log(e.key);
+    if (e.key === "Home") {
+        console.log("hi");
+    }
+});
+
+// Thứ tự ưu tiên keydown -> keypress -> keyup
