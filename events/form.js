@@ -33,3 +33,13 @@ input.addEventListener("keypress", function (e) {
 input.addEventListener("change", function (e) {
     console.log("change");
 });
+
+// 5. focus
+input.addEventListener("focus", function (e) {
+    console.log("focus");
+});
+
+// 6. blur
+input.addEventListener("blur", function (e) {
+    console.log("blur");
+});
