@@ -48,7 +48,14 @@ input.addEventListener("blur", function (e) {
 const form = document.querySelector(".form");
 form.addEventListener("submit", function (e) {
     e.preventDefault();
-    if (input.value === "") {
-        alert("you can not make empty input");
-    }
+    // this, e.target
+    // console.log(this);
+    // console.log(e.target);
+    // this.elements
+    console.log(this.elements);
+    console.log(this.elements["username"].value);
+    const username = this.elements["username"].value;
+    const gender = this.elements["gender"].value;
+    const hobby = this.elements["hobby"].value;
+    console.log({ username, gender, hobby });
 });
