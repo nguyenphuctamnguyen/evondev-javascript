@@ -43,3 +43,12 @@ input.addEventListener("focus", function (e) {
 input.addEventListener("blur", function (e) {
     console.log("blur");
 });
+
+// 7. submit form
+const form = document.querySelector(".form");
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    if (input.value === "") {
+        alert("you can not make empty input");
+    }
+});
