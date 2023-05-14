@@ -23,8 +23,13 @@ input.addEventListener("keyup", function (e) {
 input.addEventListener("keypress", function (e) {
     console.log(e.key);
     if (e.key === "Home") {
-        console.log("hi");
+        console.log("keypress");
     }
 });
 
 // Thứ tự ưu tiên keydown -> keypress -> keyup
+
+// 4. change: sự kiện xảy ra khi gõ xong, nhấn Enter hoặc nhấn chuột ra ngoài 1 lần
+input.addEventListener("change", function (e) {
+    console.log("change");
+});
