@@ -40,3 +40,5 @@ boxed.addEventListener("scroll", function () {
 // 5. offsetWidth và scrollWidth
 // boxed.offsetWidth -> 200
 // boxed.scrollWidth -> 600
+
+// 6. scrollIntoView(): scroll tới phạm vi có thể thấy nó
