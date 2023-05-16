@@ -77,8 +77,12 @@ body {
 .boxed {
     width: 200px;
     height: 200px;
-    padding: 20px;
-    border: 5px solid;
+    background-color: #ffa400;
+    overflow: auto;
+}
+.boxed-content {
+    height: 600px;
+    width: 600px;
 }
 
 .button {

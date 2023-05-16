@@ -25,3 +25,14 @@ function debounceFn(func, wait, immediate) {
 
 // 3. window.pageXOffset: khoảng các scroll của window theo chiều dọc
 // window.pageYOffset: khoảng các scroll của window theo chiều ngang
+
+// 4. scrollHeight: trả về chiều cao của element bao gồm padding, nhưng không có border
+// scrollWidth: trả về chiều rộng của element bao gồm padding, nhưng không có border
+// scrollTop
+// scrollLeft
+const boxed = document.querySelector(".boxed");
+boxed.addEventListener("scroll", function () {
+    console.log(boxed.scrollTop);
+    console.log(boxed.scrollLeft);
+});
+// scroll(x, y)
