@@ -6,7 +6,7 @@ window.addEventListener(
     }, 25)
 );
 
-// 2. Debounce
+// 2. Debounce: là kĩ thuật buộc một hàm phải đợi một khoảng thời gian nhất định trước khi thực thi. Trong khoảng thời gian đợi, mọi tác động sẽ bị bỏ qua và chỉ nhận duy nhất 1 hành động diễn ra trong thời gian chúng ta định trước
 function debounceFn(func, wait, immediate) {
     let timeout;
     return function () {
@@ -22,3 +22,6 @@ function debounceFn(func, wait, immediate) {
         if (callNow) func.apply(context, args);
     };
 }
+
+// 3. window.pageXOffset: khoảng các scroll của window theo chiều dọc
+// window.pageYOffset: khoảng các scroll của window theo chiều ngang
