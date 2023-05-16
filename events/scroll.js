@@ -36,3 +36,7 @@ boxed.addEventListener("scroll", function () {
     console.log(boxed.scrollLeft);
 });
 // scroll(x, y)
+
+// 5. offsetWidth và scrollWidth
+// boxed.offsetWidth -> 200
+// boxed.scrollWidth -> 600
