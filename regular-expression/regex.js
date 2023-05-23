@@ -57,3 +57,34 @@ console.log(re1.test("world")); // false
 // \t: tab
 // .: khớp với tất cả trừ newline
 // [^]: all
+
+// 5. Quantifiers: {n} {n,m} + ? *
+// {n}: số lượng nhất định
+// {n,m}: số lượng trong khoảng n tới m
+// +: lấy 1 hoặc nhiều kí tự thỏa điều kiện
+// ?: có thể có hoặc không có kí tự nào đó
+// *: không có hoặc là nhiều
+
+// string.match(regex) "abc".match(/\w/) -> []
+const str1 = "welcome to 202300000001";
+console.log(str1.match(/\d/)[0]); // 2
+console.log(str1.match(/\d\d\d\d/)[0]); // 2023
+console.log(str1.match(/\d{4}/)[0]); // 2023
+console.log(str1.match(/\d{4,6}/)[0]); // 202300
+console.log(str1.match(/\d+/)[0]); // 202300000001
+
+const str2 = "color or color?";
+console.log(str2.match(/color/g)); // ['color', 'color']
+
+const str3 = "color or colour?";
+console.log(str3.match(/colou?r/g)); // ['color', 'colour']
+
+const str4 = "12345";
+console.log(str4.match(/\d*/g)); // ['12345', '']
+console.log(str4.match(/\d+/g)); // ['12345']
+console.log(str4.match(/\d?/g)); // ['1', '2', '3', '4', '5', '']
+
+// flag
+// g: global
+// i: case insensitive
+// m: multiple lines
