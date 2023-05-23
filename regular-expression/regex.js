@@ -92,3 +92,14 @@ console.log(str4.match(/\d?/g)); // ['1', '2', '3', '4', '5', '']
 // 6. Groups ()
 /(\d{3})(\w+)/.test("123"); // false
 /(\d{3})?(\w+)/.test("123"); // true
+
+// 7. Escaping \ / [ ] ( ) { } ? + * | . ^ $
+/\?/.test("?"); // true
+/\*/.test("*"); // true
+
+// 8. Boundaries \b \B
+// \b
+"my name is evondev".match(/\bevondev/g); // ['evondev']
+// \B
+"my name is evondev".match(/\Bevondev/g); // null
+"my name isevondev".match(/\Bevondev/g); // ['evondev']
