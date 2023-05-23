@@ -88,3 +88,7 @@ console.log(str4.match(/\d?/g)); // ['1', '2', '3', '4', '5', '']
 // g: global
 // i: case insensitive
 // m: multiple lines
+
+// 6. Groups ()
+/(\d{3})(\w+)/.test("123"); // false
+/(\d{3})?(\w+)/.test("123"); // true
