@@ -33,3 +33,27 @@ console.log(re1.test("world")); // false
 /[0-9]/.test("abc1000abc"); // true
 
 /[a-z0-9A-Z]/.test("123abcAbc"); // true
+
+// phủ định
+/[^a-z]/.test("a"); // true
+
+// 4. Meta characters
+// \d: khớp với số, tương đương với [0-9]
+/\d/.test("1234"); // true
+// \D: ngược lại với \d tương đương với [^0-9]
+/\D/.test("1234"); // false
+
+// \w: khớp với các kí tự, số và dấu gạch dưới ([a-z0-9A-Z])
+/\w/.test("_"); // true
+// \W: ngược lại với \w ([^a-z0-9A-Z])
+/\W/.test("_"); // false
+
+// \s: khớp với các kí tự khoảng trắng: spaces, tab, newline
+/\s/.test(" "); // true
+// \S: ngược lại với \s: các kí tự không phải khoảng trắng
+/\S/.test(" "); // false
+
+// \n: newline
+// \t: tab
+// .: khớp với tất cả trừ newline
+// [^]: all
