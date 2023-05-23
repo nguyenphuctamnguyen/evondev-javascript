@@ -103,3 +103,10 @@ console.log(str4.match(/\d?/g)); // ['1', '2', '3', '4', '5', '']
 // \B
 "my name is evondev".match(/\Bevondev/g); // null
 "my name isevondev".match(/\Bevondev/g); // ['evondev']
+
+// 9. string.replace(regex, value)
+const str5 = "hello welcome to my hello";
+console.log(str5.replace("hello", "hi")); // hi welcome to my hello
+str5.replace(/hello/g, "evondev"); // 'evondev welcome to my evondev'
+
+"welcome 123456".match(/\d+/g); // ['123456']
