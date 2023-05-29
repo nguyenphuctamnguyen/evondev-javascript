@@ -37,3 +37,20 @@ function number(a, b, c) {
 }
 number(1, 2, 3);
 number(); // plz insert your arguments
+
+// 5. closure in loop
+for (var z = 1; z < 5; z++) {
+    setTimeout(function () {
+        console.log(z); // 4 lần 5
+    }, 1000);
+}
+// var -> hoisting
+// scope của var sau mỗi vòng lặp không thay đổi
+
+for (let z = 1; z < 5; z++) {
+    setTimeout(function () {
+        console.log(z); // 1 2 3 4
+    }, 1000);
+}
+// let -> not hoisting
+// scope của let thay đổi sau mỗi vòng lặp
