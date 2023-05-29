@@ -23,3 +23,17 @@ console.log(+str);
 // sang boolean
 console.log(!!str); // true
 console.log(!!""); // false
+
+// 4. arguments
+function number(a, b, c) {
+    // console.log(arguments); // Arguments(3) [1, 2, 3]
+    // console.log(arguments[2]); // 3
+    // console.log(typeof arguments); // object
+    if (!arguments.length) console.log("plz insert your arguments");
+    // convert to array
+    const args = Array.from(arguments);
+    const args2 = [...arguments];
+    return a + b + c;
+}
+number(1, 2, 3);
+number(); // plz insert your arguments
