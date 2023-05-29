@@ -54,3 +54,7 @@ for (let z = 1; z < 5; z++) {
 }
 // let -> not hoisting
 // scope của let thay đổi sau mỗi vòng lặp
+
+// 6. Sự khác nhau giữa localStorage và sessionStorage
+// localStorage.getItem("abc") // vẫn còn khi đóng trình duyệt
+// sessionStorage.getItem("abc") // mất khi đóng trình duyệt
