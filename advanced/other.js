@@ -58,3 +58,30 @@ for (let z = 1; z < 5; z++) {
 // 6. Sự khác nhau giữa localStorage và sessionStorage
 // localStorage.getItem("abc") // vẫn còn khi đóng trình duyệt
 // sessionStorage.getItem("abc") // mất khi đóng trình duyệt
+
+// 7. Các trường hợp không nên sử dụng arrow function
+// event handlers
+const input = document.querySelector(".input");
+input.addEventListener("keyup", function () {
+    console.log(this.value);
+});
+input.addEventListener("keyup", () => {
+    console.log(this.value); // undefined vì arrow function không có this
+});
+
+// object
+const student = {
+    counter: 0,
+    increment() {
+        return ++this.counter;
+    },
+};
+console.log(student.increment()); // 1
+
+const student2 = {
+    counter: 0,
+    increment: () => {
+        return ++this.counter;
+    },
+};
+console.log(student2.increment()); // NaN vì arrow function không có this
