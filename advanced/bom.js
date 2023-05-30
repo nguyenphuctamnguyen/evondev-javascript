@@ -29,3 +29,9 @@ for (let i of params.values()) {
 }
 
 params.delete("page");
+
+// 2. History
+console.log(window.history); // History {length: 10, scrollRestoration: 'auto', state: null}
+// history.back(); // quay lại trang trước đó
+// history.forward(); // tới trang kế tiếp
+// history.go(number); // -1: trang trước, -2: trang trước trang trước, 1: trang sau, 2: trang sau trang sau
