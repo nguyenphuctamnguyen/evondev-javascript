@@ -34,3 +34,22 @@ function log(level, time, message) {
 // partial function
 const logErrToday = log.bind(null, "Error", "Today");
 logErrToday("Server OK!");
+
+// 2. Call and Apply
+const person = {
+    firstName: "Lee",
+    lastName: "ChiaoYing",
+};
+function sayHello(str1, str2) {
+    console.log(`${str1} ${str2} ${this.firstName} ${this.lastName}`);
+}
+// function.call(this, arg1, arg2,...)
+sayHello.call(person, "Hello", "good morning"); // Hello good morning Lee ChiaoYing
+
+// function.apply(this, [arg1, arg2,...])
+sayHello.apply(person, ["Hello", "good morning"]); // Hello good morning Lee ChiaoYing
+
+const arr = [1, 2, 3];
+const arr2 = [2, 3, 4];
+arr.push.apply(arr, arr2);
+console.log(arr); // [1, 2, 3, 2, 3, 4]
