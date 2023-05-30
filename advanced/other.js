@@ -114,13 +114,56 @@ function flatArray(arr, depth) {
     const result =
         depth > 0
             ? arr.reduce(
-                (a, val) =>
-                    a.concat(
-                        Array.isArray(val) ? flatArray(val, depth - 1) : val
-                    ),
-                []
-            )
+                  (a, val) =>
+                      a.concat(
+                          Array.isArray(val) ? flatArray(val, depth - 1) : val
+                      ),
+                  []
+              )
             : arr.slice();
     return result;
 }
 console.log(flatArray(complexArr, Infinity)); // [1, 2, 3, 3, 4, 5, 2, 3, 2, 3, 5, 9999, 1, 2]
+
+// 9. Set
+const mySet = new Set();
+
+mySet.add(1);
+mySet.add(1);
+mySet.add("ying");
+console.log(mySet); // {1, 'ying'}
+
+mySet.has(1); // true
+
+mySet.delete(1);
+console.log(mySet); // {'ying'}
+
+console.log(mySet.size); // 1
+
+mySet.clear();
+console.log(mySet.size); // 0
+
+const arr = [1, 2, 3, 4, 1, 1, 1, 3, 3, 3, 5, 5, 7, 8];
+// -> [1, 2, 3, 4, 5, 7, 8]
+// array to set
+const mySet2 = new Set(arr);
+console.log(mySet2); // {1, 2, 3, 4, 5, 7, 8}
+// set to array
+const newArr = Array.from(mySet2);
+// const newArr = [...mySet2];
+console.log(newArr); // [1, 2, 3, 4, 5, 7, 8]
+
+// cách khác
+let result = [];
+for (let index = 0; index < arr.length; index++) {
+    const element = arr[index];
+    if (!result.includes(element)) {
+        result.push(element);
+    }
+}
+console.log(result); // [1, 2, 3, 4, 5, 7, 8]
+
+// for of
+for (let item of mySet2) {
+    console.log(item); // 1 2 3 4 5 7 8
+}
