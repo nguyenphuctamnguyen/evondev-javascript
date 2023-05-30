@@ -85,3 +85,42 @@ const student2 = {
     },
 };
 console.log(student2.increment()); // NaN vì arrow function không có this
+
+// 8. Đệ quy (recursive)
+function countDown(number) {
+    console.log(number);
+    let other = number - 1;
+    if (other > 0) {
+        countDown(other);
+    }
+    // if (condition) stop recursive else run recursive
+}
+countDown(3); // 3 2 1
+
+// [1, 2, 3, 3, 4, 5, 2, 3, 2, 3, 5, 9999, 1, 2]
+const complexArr = [
+    [1, 2, 3],
+    [3, 4, 5],
+    [
+        [2, 3],
+        [2, 3, 5, [9999]],
+        [1, 2],
+    ],
+];
+console.log(complexArr.flat(Infinity)); // [1, 2, 3, 3, 4, 5, 2, 3, 2, 3, 5, 1, 2]
+// a [1,2,3] b [4,5,6] -> [1,2,3,4,5,6] -> a.concat(b)
+// [1,2,3].slice()
+function flatArray(arr, depth) {
+    const result =
+        depth > 0
+            ? arr.reduce(
+                (a, val) =>
+                    a.concat(
+                        Array.isArray(val) ? flatArray(val, depth - 1) : val
+                    ),
+                []
+            )
+            : arr.slice();
+    return result;
+}
+console.log(flatArray(complexArr, Infinity)); // [1, 2, 3, 3, 4, 5, 2, 3, 2, 3, 5, 9999, 1, 2]
