@@ -167,3 +167,10 @@ console.log(result); // [1, 2, 3, 4, 5, 7, 8]
 for (let item of mySet2) {
     console.log(item); // 1 2 3 4 5 7 8
 }
+
+// 10. Debugger in vsc
+// for (var z = 1; z < 5; z++) {
+//     setTimeout(function () {
+//         console.log(z);
+//     }, 1000);
+// }
