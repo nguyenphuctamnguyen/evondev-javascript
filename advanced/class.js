@@ -16,9 +16,25 @@ class Person2 {
     constructor(name) {
         this.name = name;
     }
-    getName() {
-        console.log(this.name);
+    // getName() {
+    //     return this.name;
+    // }
+    get name() {
+        return this._name;
+    }
+    // setName(newName) {
+    //     this.name = newName;
+    // }
+    set name(newName) {
+        return (this._name = newName);
     }
 }
 const su = new Person2("su");
-su.getName(); // su
+// console.log(su.getName()); // su
+
+// su.setName("nguyen");
+// console.log(su.getName()); // nguyen
+
+console.log(su.name); // su
+su.name = "nguyen";
+console.log(su.name); // nguyen
