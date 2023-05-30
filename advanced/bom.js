@@ -35,3 +35,21 @@ console.log(window.history); // History {length: 10, scrollRestoration: 'auto',
 // history.back(); // quay lại trang trước đó
 // history.forward(); // tới trang kế tiếp
 // history.go(number); // -1: trang trước, -2: trang trước trang trước, 1: trang sau, 2: trang sau trang sau
+
+// 3. Navigator
+console.log(navigator.userAgent); // Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36
+
+const deviceType = () => {
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        return "tablet";
+    } else if (
+        /Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
+            ua
+        )
+    ) {
+        return "mobile";
+    }
+    return "desktop";
+};
+console.log(deviceType()); // desktop
