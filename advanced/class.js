@@ -82,5 +82,23 @@ let articles = [
     new Article("JS", new Date(2023, 11, 1)),
 ];
 // articles.sort((a, b) => a.date - b.date);
+// className.methodName
 articles.sort(Article.compare);
 console.log(articles[0].title); // CSS
+
+// Static property
+class Item {
+    constructor(name) {
+        this.name = name;
+        this.constructor.count++;
+        // this.constructor.propertyName
+    }
+    static count = 0;
+    static getCount() {
+        // className.propertyName
+        return Item.count;
+    }
+}
+const pen = new Item("pen");
+const pencil = new Item("pencil");
+console.log(Item.getCount()); // 2
