@@ -102,3 +102,26 @@ class Item {
 const pen = new Item("pen");
 const pencil = new Item("pencil");
 console.log(Item.getCount()); // 2
+
+// Super and extends
+class Animal {
+    constructor(legs) {
+        this.legs = legs;
+    }
+    walking() {
+        console.log(`walking on ${this.legs} legs`);
+    }
+}
+
+class Bird extends Animal {
+    constructor(legs) {
+        super(legs);
+    }
+    flying() {
+        console.log("i can fly");
+    }
+}
+let bird = new Bird(2);
+console.log(bird); // Bird {legs: 2}
+console.log(bird.walking()); // walking on 2 legs
+console.log(bird.flying()); // i can fly
