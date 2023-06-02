@@ -122,3 +122,28 @@ const dev2 = isFrontendDev(["css"]);
 const devAllSettled = Promise.allSettled([dev1, dev2]).then((data) => {
     console.log(data); // [{status: 'fulfilled', value: 'fe dev'}, {status: 'rejected', reason: 'not fe dev'}]
 });
+
+// try catch
+function isFrontendDev2(languages) {
+    if (!languages.includes("html")) {
+        throw new Error("not fe dev");
+    }
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => {
+            resolve("fe dev");
+        }, 1000);
+    });
+}
+try {
+    isFrontendDev2(["css"])
+        .then((data) => {
+            console.log(data);
+        })
+        .catch((err) => {
+            console.log(err);
+        });
+} catch (error) {
+    console.log("oh noooo");
+} finally {
+    console.log("demo");
+}
