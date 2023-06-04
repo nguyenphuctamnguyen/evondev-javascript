@@ -3,6 +3,7 @@
 // same origin: evondev.com evondev.com/posts
 // not same origin: evondev.com facebook.com
 
+// Status
 // 200: Success
 // 201: Create
 
@@ -20,3 +21,6 @@
 // 5xx: Server
 // 502: Bad Gateway
 // 504: Gateway Timeout
+
+// Methods
+//  POST GET PUT PATCH DELETE
