@@ -281,3 +281,23 @@ body {
     border-right: 5px solid transparent;
     border-radius: 50%;
 }
+/* JSON placeholder */
+.form-post {
+    display: flex;
+    justify-content: center;
+    gap: 0 25px;
+    margin: 25px auto;
+}
+.form-post input {
+    padding: 10px 15px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+.form-post button {
+    background-color: #6a5af9;
+    color: white;
+    border: 0;
+    outline: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+}
