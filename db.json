@@ -30,5 +30,27 @@
   ],
   "profile": {
     "name": "typicode"
-  }
+  },
+  "courses": [
+    {
+      "image": "https://images.unsplash.com/photo-1516482961970-1a7be40dc616?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "title": "HTML&CSS",
+      "author": "su",
+      "rating": 5,
+      "buyAmount": 11234,
+      "price": 12.99,
+      "bestSeller": true,
+      "id": 1
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1596913152332-e56f2cc8165c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D&auto=format&fit=crop&w=500&q=60",
+      "title": "Javascript",
+      "author": "AWS ",
+      "rating": 1,
+      "buyAmount": 124,
+      "price": 22,
+      "bestSeller": false,
+      "id": 2
+    }
+  ]
 }
