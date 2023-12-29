@@ -28,3 +28,17 @@ function isPalindrome(str) {
 }
 console.log(isPalindrome("aaBAA")); // true
 console.log(isPalindrome("cABaa")); // false
+
+// 3. Array Chunking
+// [1,2,3,4,5,6,7,8], 3
+// [[1,2,3],[4,5,6],[7,8]]
+function chunk(array, size) {
+    let result = [];
+    for (let index = 0; index < array.length - 1; index += size) {
+        const element = array[index];
+        result.push(array.slice(index, index + size));
+    }
+    return result;
+}
+console.log(chunk([1, 2, 3, 4, 5, 6, 7, 8], 3)); // [[1,2,3],[4,5,6],[7,8]]
+console.log(chunk([1, 2, 3, 4, 5, 6, 7, 8], 2)); // [[1,2],[3,4],[5,6],[7,8]]
