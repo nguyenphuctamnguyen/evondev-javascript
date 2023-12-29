@@ -42,3 +42,29 @@ function chunk(array, size) {
 }
 console.log(chunk([1, 2, 3, 4, 5, 6, 7, 8], 3)); // [[1,2,3],[4,5,6],[7,8]]
 console.log(chunk([1, 2, 3, 4, 5, 6, 7, 8], 2)); // [[1,2],[3,4],[5,6],[7,8]]
+
+// 4. Reverse array
+// [1,2,3,4,5] -> [5,4,3,2,1]
+// C1
+function reverseArray(array) {
+    let result = [];
+    for (let index = array.length - 1; index >= 0; index--) {
+        result.push(array[index]);
+    }
+    return result;
+}
+console.log(reverseArray([1, 2, 3, 4, 5])); // [5,4,3,2,1]
+
+// C2
+// [1,2,3,4,5,6] -> [6,5,4,3,2,1]
+function _reverseArray(array) {
+    let result = [];
+    for (let index = 0; index < array.length / 2; index++) {
+        [array[index], array[array.length - 1 - index]] = [
+            array[array.length - 1 - index],
+            array[index],
+        ];
+    }
+    return array;
+}
+console.log(_reverseArray([1, 2, 3, 4, 5, 6])); // [6, 5, 4, 3, 2, 1]
